@@ -21,12 +21,12 @@ mongoose.connect(url).then( () => {
     important: Boolean,
   })
   const Note = mongoose.model('Note', noteSchema)
-
+  /*
   const note = new Note({
     content: 'HTML is x',
     important: true,
   })
-
+  */
   Note.find({}).then(result => {
     result.forEach(note => {
       console.log(note)
