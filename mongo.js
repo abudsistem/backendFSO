@@ -1,11 +1,18 @@
 const mongoose = require('mongoose')
-im
 
-const password = require('./password.js')
+//const password = require('./password.js')
 //const password = process.argv[2]
+if (process.argv.length < 3) {
+  console.log('give password as argument')
+  process.exit(1)
+}
+
+const password = process.argv[2]
+
 
 const url =
   `mongodb+srv://fullstackopen:${password}@fullstackopen.d0bqfmo.mongodb.net/?retryWrites=true&w=majority&appName=fullstackopen`
+
 mongoose.set('strictQuery',false)
 
 mongoose.connect(url).then(()=>{
