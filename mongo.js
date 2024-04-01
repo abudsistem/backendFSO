@@ -15,7 +15,7 @@ const url =
 
 mongoose.set('strictQuery',false)
 
-mongoose.connect(url).then(()=>{
+mongoose.connect(url).then( () => {
   const noteSchema = new mongoose.Schema({
     content: String,
     important: Boolean,

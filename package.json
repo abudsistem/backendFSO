@@ -7,6 +7,8 @@
     "start": "node index.js",
     "dev": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint .",
+    "lint-fix": "eslint . --fix",
     "build:ui": "rm -rf dist && cd ../FSOPart1/FSOpart1 && npm run build && cp -r dist ../../FSOPart3",
     "deploy:full": "npm run build:ui && git add . && git commit -m uibuild && git push"
   },
@@ -19,6 +21,7 @@
     "mongoose": "^8.2.4"
   },
   "devDependencies": {
+    "eslint": "^8.57.0",
     "nodemon": "^3.1.0"
   }
 }
