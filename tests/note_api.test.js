@@ -9,6 +9,7 @@ const helper = require('./test_helper')
 
 const Note = require('../models/note')
 
+
 describe('when there is initially some notes saved', () => {
   beforeEach(async () => {
     await Note.deleteMany({})
@@ -59,7 +60,7 @@ describe('when there is initially some notes saved', () => {
     })
 
     test('fails with statuscode 400 id is invalid', async () => {
-      const invalidId = '5a3d5da59070081a82a3445'
+      const invalidId = '660acd1ec6186a44e801e3b5'
 
       await api
         .get(`/api/notes/${invalidId}`)
